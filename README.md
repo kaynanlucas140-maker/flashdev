@@ -1,4 +1,4 @@
-# ⚡ FlashDev - Flashcards Quiz (Comic Edition)
+# ⚡ FlashDev - Aplicativo de Flashcards
 
 Este é um miniaplicativo mobile educativo, responsivo e altamente interativo desenvolvido para auxiliar programadores iniciantes na memorização e fixação de conceitos técnicos fundamentais. O projeto une uma arquitetura moderna a uma estética visual marcante no estilo **Neobrutalista / Comic Book** (histórias em quadrinhos), contando com cores vibrantes, bordas grossas e sombras projetadas.
 
