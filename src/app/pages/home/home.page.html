@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+  
+  <div class="header-container">
+    <h1 class="titulo-comic">DEV_<span>COMIC</span></h1>
+    <p class="subtitulo-comic">Escolha uma revista técnica para iniciar seus estudos em flashcards!</p>
+  </div>
+
+  <div style="padding: 0 1rem; max-width: 450px; margin: 0 auto;">
+    
+    <ion-card 
+      *ngFor="let deck of listaDecks" 
+      [className]="'card-comic ' + deck.classe"
+      (click)="jogarDeck(deck.id)">
+      
+      <ion-card-header>
+        <span class="badge-comic">DECK OFICIAL</span>
+        <h2>{{ deck.nome }}</h2>
+        <p style="font-size: 0.8rem; font-weight: bold; margin-top: 5px; color: currentColor; opacity: 0.8;">
+          {{ deck.sub }}
+        </p>
+      </ion-card-header>
+      
+    </ion-card>
+
+  </div>
+
+</ion-content>

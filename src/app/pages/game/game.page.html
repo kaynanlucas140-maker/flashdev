@@ -1,0 +1,49 @@
+<ion-content [fullscreen]="true">
+  <div class="game-container" *ngIf="perguntas.length > 0">
+
+    <div id="contador">CARD {{ indexAtual + 1 }} DE {{ perguntas.length }}</div>
+
+    <div class="flashcard" [class.active]="isFlipped" (click)="virarCard()">
+      <div class="card-inner">
+        
+        <div [className]="'card-front ' + perguntas[indexAtual].tema">
+          <span class="badge-comic" style="position: absolute; top: 1.5rem;">
+            {{ perguntas[indexAtual].categoria }}
+          </span>
+          <h2 [innerHTML]="perguntas[indexAtual].q" style="text-align: center; margin-top: 2rem;"></h2>
+          <span class="action-hint">[ CLIQUE PARA VIRAR ]</span>
+        </div>
+        
+        <div class="card-back">
+          <h2>RESPOSTA:</h2>
+          <p [innerHTML]="perguntas[indexAtual].a"></p>
+          <span class="action-hint">[ VOLTAR ]</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="nav-controls">
+      
+      <ng-container *ngIf="!isFlipped">
+        <button class="btn-pop red" [disabled]="indexAtual === 0" (click)="voltarCard()">
+          &lt; Voltar
+        </button>
+        <button class="btn-pop blue" (click)="proximoCard()">
+          Pular &gt;
+        </button>
+      </ng-container>
+
+      <ng-container *ngIf="isFlipped">
+        <button class="btn-pop red" [disabled]="cardRespondido" (click)="votarResposta(false); $event.stopPropagation();">
+          Não sabia 👎
+        </button>
+        <button class="btn-pop green" [disabled]="cardRespondido" (click)="votarResposta(true); $event.stopPropagation();">
+          Eu sabia! 👍
+        </button>
+      </ng-container>
+
+    </div>
+
+  </div>
+</ion-content>

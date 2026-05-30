@@ -35,3 +35,82 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+// ==========================================
+// ESTILOS GERAIS COMIC (NEOBRUTALISMO)
+// ==========================================
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&display=swap');
+
+ion-content {
+  --background: #fef08a !important; 
+  font-family: 'Arial Black', Impact, sans-serif;
+}
+
+.titulo-comic {
+  font-family: 'Bangers', cursive, sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  color: #2563eb;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px #000000;
+  text-shadow: 5px 5px 0px #000000;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  
+  span {
+    color: #ef4444;
+  }
+}
+
+.subtitulo-comic {
+  color: #000000;
+  font-size: 0.95rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.card-comic {
+  border: 5px solid #000000 !important;
+  border-radius: 4px !important;
+  box-shadow: 8px 8px 0px #000000 !important;
+  margin-bottom: 1.5rem !important;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+
+  &:active {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0px #000000 !important;
+  }
+}
+
+.badge-comic {
+  padding: 0.4rem 1.2rem;
+  border: 3px solid #000000;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 0px #000000;
+  text-transform: uppercase;
+}
+
+.html-theme { background-color: #f97316 !important; color: #000000; }
+.css-theme { background-color: #3b82f6 !important; color: #ffffff; }
+.js-theme { background-color: #22c55e !important; color: #000000; }
+.git-theme { background-color: #f05032 !important; color: #ffffff; }
+.ionic-theme { background-color: #3880ff !important; color: #ffffff; }
+
+.card-comic h2 {
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #000000;
+  font-size: 1.4rem;
+  margin: 1rem 0 0 0;
+}
